@@ -1,0 +1,1150 @@
+<Schema name="DW_JAZAM">
+  <Dimension type="TimeDimension" visible="false" highCardinality="false" name="Periodo">
+    <Hierarchy name="atmd" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="ano" visible="true" column="ano" nameColumn="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never" caption="Ano">
+      </Level>
+      <Level name="mes" visible="true" column="mes" nameColumn="nome_mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="anomes" visible="true" column="anomes" nameColumn="ano_mes_nome_old" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="Ano/M&#234;s">
+      </Level>
+      <Level name="quinzena" visible="true" column="quinzena" nameColumn="quinzena" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeUndefined" hideMemberIf="Never" caption="Quinzena">
+      </Level>
+      <Level name="dia" visible="true" column="sk_tempo" nameColumn="dia_mes_ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never" caption="Dia">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="ano" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="ano" visible="true" column="ano" nameColumn="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="quinzena" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Quinzena">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="quinzena" visible="true" column="quinzena" nameColumn="quinzena" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeUndefined" hideMemberIf="Never" caption="Quinzena">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="mes" visible="false" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Mes">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="mes" visible="true" column="mes" nameColumn="nome_mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="M&#234;s">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="dia" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Dia">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="dia" visible="true" column="sk_tempo" nameColumn="dia_mes_ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never" caption="Dia">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="anomes" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="anomes" visible="true" column="anomes" nameColumn="ano_mes_nome_old" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="Ano M&#234;s">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" visible="false" highCardinality="false" name="dataBase">
+    <Hierarchy name="atmd" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="ano" visible="true" column="ano" nameColumn="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never" caption="Ano">
+      </Level>
+      <Level name="mes" visible="true" column="mes" nameColumn="nome_mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="anomes" visible="true" column="anomes" nameColumn="ano_mes_nome_old" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="Ano/M&#234;s">
+      </Level>
+      <Level name="quinzena" visible="true" column="quinzena" nameColumn="quinzena" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeUndefined" hideMemberIf="Never" caption="Quinzena">
+      </Level>
+      <Level name="dia" visible="true" column="sk_tempo" nameColumn="dia_mes_ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never" caption="Dia">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="ano" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="ano" visible="true" column="ano" nameColumn="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="quinzena" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Quinzena">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="quinzena" visible="true" column="quinzena" nameColumn="quinzena" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeUndefined" hideMemberIf="Never" caption="Quinzena">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="mes" visible="false" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Mes">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="mes" visible="true" column="mes" nameColumn="nome_mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="M&#234;s">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="dia" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Dia">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="dia" visible="true" column="sk_tempo" nameColumn="dia_mes_ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never" caption="Dia">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="anomes" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tempo">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="anomes" visible="true" column="anomes" nameColumn="ano_mes_nome_old" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="Ano M&#234;s">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="false" highCardinality="false" name="Endereco" caption="Endereco">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_endereco" caption="Geo">
+      <Table name="endereco" schema="dim">
+      </Table>
+      <Level name="pais" visible="true" column="codpais" nameColumn="dscpais" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Pais">
+      </Level>
+      <Level name="regiao" visible="true" column="codregiao" nameColumn="dscregiao" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Regiao">
+      </Level>
+      <Level name="estado" visible="true" column="codestado" nameColumn="sglestado" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Estado">
+      </Level>
+      <Level name="cidade" visible="true" column="sk_endereco" nameColumn="dsccidade" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Cidade">
+      </Level>
+      <Level name="Latitude" visible="true" column="sk_lat" nameColumn="lat" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Latitude">
+      </Level>
+      <Level name="Longitude" visible="true" column="sk_lon" nameColumn="lon" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Longitude">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="sigla" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_endereco" caption="Sigla UF.">
+      <Table name="endereco" schema="dim">
+      </Table>
+      <Level name="sigla" visible="true" column="codestado" nameColumn="sglestado" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Sigla UF.">
+      </Level>
+      <Level name="cidade" visible="true" column="sk_endereco" nameColumn="dsccidade" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Cidade">
+      </Level>
+      <Level name="Latitude" visible="true" column="sk_lat" nameColumn="lat" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Latitude">
+      </Level>
+      <Level name="Longitude" visible="true" column="sk_lon" nameColumn="lon" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Longitude">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="mapa" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_endereco" caption="Mapa">
+      <Table name="endereco" schema="dim">
+      </Table>
+      <Level name="cidade" visible="true" column="sk_endereco" nameColumn="dsccidade" type="Numeric" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Cidade">
+      </Level>
+      <Level name="Latitude" visible="true" column="sk_lat" nameColumn="lat" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Latitude">
+      </Level>
+      <Level name="Longitude" visible="true" column="sk_lon" nameColumn="lon" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Longitude">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="faixa" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos">
+      <Table name="endereco" schema="dim">
+      </Table>
+      <Level name="faixa" visible="true" column="codfaixapopulacao" nameColumn="dscfaixapopulacao" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Faixa Popula&#231;&#227;o">
+      </Level>
+      <Level name="quantidade" visible="true" column="qtdepopulacao" nameColumn="qtdepopulacao" type="Numeric" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Qtde. Popula&#231;&#227;o">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="municipio" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_endereco">
+      <Table name="endereco" schema="dim">
+      </Table>
+      <Level name="nome" visible="true" column="sk_endereco" nameColumn="dsccidade" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Munic&#237;pio">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Cliente" caption="Cliente">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_cliente" caption="Cliente">
+      <Table name="cliente" schema="dim">
+      </Table>
+      <Level name="Codigo" visible="true" column="codcli" nameColumn="codcli" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Codigo">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Loja" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_cliente" caption="Loja">
+      <Table name="cliente" schema="dim">
+      </Table>
+      <Level name="Loja" visible="true" column="lojacli" nameColumn="lojacli" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Loja">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nome" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_cliente" caption="Nome">
+      <Table name="cliente" schema="dim">
+      </Table>
+      <Level name="Nome" visible="true" column="sk_cliente" nameColumn="nomecli" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Nome">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Mercado" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_cliente" caption="Mercado">
+      <Table name="cliente" schema="dim">
+      </Table>
+      <Level name="Mercado" visible="true" column="codmercado" nameColumn="dscmercado" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Mercado">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Rede" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_cliente" caption="Rede">
+      <Table name="cliente" schema="dim">
+      </Table>
+      <Level name="Rede" visible="true" column="nomeredecli" nameColumn="nomeredecli" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="condPagto" caption="Cond. Pagto.">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_cond_pagto" caption="Cond. Pagto">
+      <Table name="cond_pagto" schema="dim">
+      </Table>
+      <Level name="condPagto" visible="true" column="codcondpagto" nameColumn="dsccondicao" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Condi&#231;&#227;o Pagamento">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Condicao" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_cond_pagto" caption="Condicao">
+      <Table name="cond_pagto" schema="dim">
+      </Table>
+      <Level name="Condicao" visible="true" column="condicao" nameColumn="sk_cond_pagto" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Condi&#231;&#227;o">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Tipo" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_cond_pagto" caption="Tipo">
+      <Table name="cond_pagto" schema="dim">
+      </Table>
+      <Level name="Tipo" visible="true" column="tipo" nameColumn="sk_cond_pagto" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Empresa" caption="Empresa">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_empresa">
+      <Table name="empresa" schema="dim">
+      </Table>
+      <Level name="Empresa" visible="true" column="dscempresa" nameColumn="dscempresa" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Empresa">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Filial" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_empresa" caption="Filial">
+      <Table name="empresa" schema="dim">
+      </Table>
+      <Level name="Filial" visible="true" column="codfilial" nameColumn="dscfilial" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Filial">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="grupoProduto" caption="Linha de Produto">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_grupo_produto" caption="Linha de Produto">
+      <Table name="grupo_produto" schema="dim">
+      </Table>
+      <Level name="descricao" visible="true" column="sk_grupo_produto" nameColumn="dscgrupoproduto" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Linha de Produto">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Moeda" caption="Moeda">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_moeda" caption="Moeda">
+      <Table name="moeda" schema="dim">
+      </Table>
+      <Level name="Moeda" visible="true" column="codmoeda" nameColumn="dscmoeda" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Moeda">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Produto" caption="Produto">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_produto" caption="Produto">
+      <Table name="produto" schema="dim">
+      </Table>
+      <Level name="descricao" visible="true" column="sk_produto" nameColumn="dscproduto" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Produto">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Grupo" visible="false" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_produto" caption="Grupo">
+      <Table name="produto" schema="dim">
+      </Table>
+      <Level name="descricao" visible="true" column="codgrupo" nameColumn="dscgrupo" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Grupo">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Tipo" visible="true" hasAll="true" allMemberCaption="Todos" allLevelName="Todos" primaryKey="sk_produto" caption="Tipo">
+      <Table name="produto" schema="dim">
+      </Table>
+      <Level name="Tipo" visible="true" column="codtipo" nameColumn="dsctipo" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="statusPedidoVenda" caption="Status Pedido Venda">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_status_pedido_venda" caption="Status Pedido Venda">
+      <Table name="status_pedido_venda" schema="dim">
+      </Table>
+      <Level name="descricao" visible="true" column="codstatuspedidovenda" nameColumn="dscstatuspedidovenda" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Status Pedido Venda">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="tabelaPreco" caption="Tabela Pre&#231;o">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tab_preco" caption="Tabela Pre&#231;o">
+      <Table name="tabela_preco" schema="dim">
+      </Table>
+      <Level name="Tabela" visible="true" column="codtab" nameColumn="dsctab" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tabela Pre&#231;o">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tes" caption="TES">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tes" caption="TES">
+      <Table name="tes" schema="dim">
+      </Table>
+      <Level name="Tes" visible="true" column="codtes" nameColumn="dsctes" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="TES">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Tipo" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tes" caption="Tipo">
+      <Table name="tes" schema="dim">
+      </Table>
+      <Level name="Tipo" visible="true" column="codtipo" nameColumn="dsctipo" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Cfop" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tes" caption="Cfop">
+      <Table name="tes" schema="dim">
+      </Table>
+      <Level name="Cfop" visible="true" column="codcfop" nameColumn="dsccfop" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="CFOP">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Grupo" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tes" caption="Grupo">
+      <Table name="tes" schema="dim">
+      </Table>
+      <Level name="Grupo" visible="true" column="codgrupotes" nameColumn="dscgrupotes" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Grupo">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="tipoNotaSaida" caption="Tipo Nota Saida">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tipo_nota_saida" caption="Tipo Nota Saida">
+      <Table name="tipo_nota_saida" schema="dim">
+      </Table>
+      <Level name="descricao" visible="true" column="codtiponotasaida" nameColumn="dsctiponotasaida" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo Nota Sa&#237;da">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="tipoPedidoVenda" caption="Tipo Pedido Venda">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tipo_pedido_venda" caption="Tipo Pedido Venda">
+      <Table name="tipo_pedido_venda" schema="dim">
+      </Table>
+      <Level name="descricao" visible="true" column="codtipopedidovenda" nameColumn="dsctipopedidovenda" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo Pedido Venda">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="unidadeMedida" caption="Unidade Medida">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_um" caption="Unidade de Medida">
+      <Table name="unidade_medida" schema="dim">
+      </Table>
+      <Level name="unidadeMedida" visible="true" column="codum" nameColumn="dscum" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Unidade Medida">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Vendedor" caption="Representante">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_vendedor" caption="Representante">
+      <Table name="vendedor" schema="dim">
+      </Table>
+      <Level name="nome" visible="true" column="sk_vendedor" nameColumn="nomevendedor" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Vendedor">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Gerente" visible="false" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_vendedor" caption="Gerente">
+      <Table name="vendedor" schema="dim">
+      </Table>
+      <Level name="nome" visible="true" column="codgerente" nameColumn="nomegerente" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Gerente">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Nome Reduz" visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_vendedor" caption="Nome Reduz">
+      <Table name="vendedor" schema="dim">
+      </Table>
+      <Level name="Nome Reduz" visible="true" column="sk_vendedor" nameColumn="nomereduz" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Nome Reduz">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="grupoPadrao" caption="Grupo Produto">
+    <Hierarchy visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_grupo_padrao" caption="Grupo de Produto">
+      <Table name="grupo_padrao" schema="dim">
+      </Table>
+      <Level name="descricao" visible="true" column="sk_grupo_padrao" nameColumn="dscgrupopadrao" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Grupo Produto">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Gerente" caption="Gerente">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_gerente" caption="Gerente">
+      <Table name="gerente" schema="dim">
+      </Table>
+      <Level name="nome" visible="true" column="sk_gerente" nameColumn="dscgerente" type="Integer" internalType="int" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Nome">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tes_colunar" caption="TES">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" allMemberCaption="Todos" primaryKey="sk_tes" caption="Grupo">
+      <Table name="tes" schema="dim">
+      </Table>
+      <Level name="Grupo" visible="true" column="dscgrupotes" nameColumn="dscgrupotes" type="String" internalType="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Grupo">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="time" caption="Data Base">
+    <Hierarchy name="ano" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Ano">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="ano" visible="true" column="ano" nameColumn="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never" caption="Ano">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="semestre" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Semestre">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="semestre" visible="true" column="semestre" nameColumn="dscsemestre" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeHalfYears" hideMemberIf="Never" caption="Semestre">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="trimestre" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Trimestre">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="trimestre" visible="true" column="trimestre" nameColumn="dsctrimestre" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never" caption="Trimestre">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="mes" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="M&#234;s">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="mes" visible="true" column="mes" nameColumn="nome_mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="M&#234;s">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="quinzena" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Quinzena">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="quinzena" visible="true" column="quinzena" nameColumn="dscquinzena" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeUndefined" hideMemberIf="Never" caption="Quinzena">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="semana" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Semana M&#234;s">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="semana" visible="true" column="num_semana_mes" nameColumn="dscsemanames" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeWeeks" hideMemberIf="Never" caption="Semana M&#234;s">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="dia" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Dia">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="dia" visible="true" column="dia" nameColumn="dia" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never" caption="Dia">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="maskdia" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Data">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="maskdia" visible="true" column="sk_tempo" nameColumn="ano_mes_dia" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never" caption="Data">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="maskas" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Ano-Semestre">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="maskas" visible="true" column="ano_semestre" nameColumn="ano_semestre" type="String" internalType="String" uniqueMembers="false" levelType="TimeHalfYears" hideMemberIf="Never" caption="Ano-Semestre">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="maskaq" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Ano-Trimestre">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="maskaq" visible="true" column="ano_trimestre" nameColumn="ano_trimestre" type="String" internalType="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never" caption="Ano-Trimestre">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="maskam" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Ano-M&#234;s">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="maskam" visible="true" column="anomes" nameColumn="ano_mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="Ano-M&#234;s">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="maskamz" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Ano-M&#234;s-Quinzena">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="maskamz" visible="true" column="ano_mes_quinzena" nameColumn="ano_mes_quinzena" ordinalColumn="anomes_quinzena" type="String" internalType="String" uniqueMembers="false" levelType="TimeUndefined" hideMemberIf="Never" caption="Ano-M&#234;s-Quinzena">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="maskamw" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Ano-M&#234;s-Semana">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="maskamw" visible="true" column="ano_mes_semana" nameColumn="ano_mes_semana" ordinalColumn="anomes_semana" type="String" internalType="String" uniqueMembers="false" levelType="TimeWeeks" hideMemberIf="Never" caption="Ano-M&#234;s-Semana">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="atmd" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_tempo" caption="Atmd Full">
+      <Table name="tempo" schema="dim">
+      </Table>
+      <Level name="ano" visible="true" column="ano" nameColumn="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never" caption="Ano">
+      </Level>
+      <Level name="semestre" visible="true" column="semestre" nameColumn="dscsemestre" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeHalfYears" hideMemberIf="Never" caption="Semestre">
+      </Level>
+      <Level name="trimestre" visible="true" column="trimestre" nameColumn="dsctrimestre" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never" caption="Trimestre">
+      </Level>
+      <Level name="mes" visible="true" column="mes" nameColumn="nome_mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" caption="M&#234;s">
+      </Level>
+      <Level name="quinzena" visible="true" column="quinzena" nameColumn="dscquinzena" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeUndefined" hideMemberIf="Never" caption="Quinzena">
+      </Level>
+      <Level name="semana" visible="true" column="num_semana_mes" nameColumn="dscsemanames" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeWeeks" hideMemberIf="Never" caption="Semana M&#234;s">
+      </Level>
+      <Level name="dia" visible="true" column="dia" nameColumn="dia" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="enderecoMundi" caption="Endere&#231;o">
+    <Hierarchy name="geo" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_endereco" caption="Geo">
+      <Table name="endereco_mundi" schema="dim">
+      </Table>
+      <Level name="localidade" visible="true" column="sk_endereco" nameColumn="localidade" type="Integer" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Cidade">
+      </Level>
+      <Level name="Latitude" visible="true" column="sk_lat" nameColumn="lat" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Latitude">
+      </Level>
+      <Level name="Longitude" visible="true" column="sk_lon" nameColumn="lon" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Longitude">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="pais" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_endereco" caption="Pais">
+      <Table name="endereco_mundi" schema="dim">
+      </Table>
+      <Level name="nome" visible="true" column="codpais" nameColumn="dscpais" type="Integer" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="estado" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_endereco" caption="Estado (UF)">
+      <Table name="endereco_mundi" schema="dim">
+      </Table>
+      <Level name="nome" visible="true" column="codestado" nameColumn="dscestado" type="Integer" internalType="int" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Estado (UF)">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="municipio" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_endereco" caption="Municipio">
+      <Table name="endereco_mundi" schema="dim">
+      </Table>
+      <Level name="nome" visible="true" column="dsccidade" nameColumn="dsccidade" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Munic&#237;pio">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="regiao" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" primaryKey="sk_endereco" caption="Regi&#227;o">
+      <Table name="endereco_mundi" schema="dim">
+      </Table>
+      <Level name="nome" visible="true" column="dscregiao" nameColumn="dscregiao" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Regi&#227;o">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="pedidoVenda" caption="Pedido de Venda" visible="true" cache="false" enabled="true">
+    <Table name="pedido_venda_colunar" schema="fato">
+    </Table>
+    <DimensionUsage source="dataBase" name="dataBase" caption="Data base" visible="false" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Periodo" name="dataEmissao" caption="Data Emiss&#227;o" visible="false" foreignKey="sk_emissao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Endereco" name="Endereco" caption="Endereco" visible="false" foreignKey="sk_endereco" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cliente" name="Cliente" visible="true" foreignKey="sk_cliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="condPagto" name="condPgto" caption="Condi&#231;&#227;o de Pagamento" visible="true" foreignKey="sk_cond_pagto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Empresa" name="Empresa" caption="Empresa" visible="true" foreignKey="sk_empresa" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoProduto" name="grupoProduto" caption="Linha Produto" visible="true" foreignKey="sk_grupo_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Moeda" name="Moeda" caption="Moeda" visible="true" foreignKey="sk_moeda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Produto" name="Produto" caption="Produto" visible="true" foreignKey="sk_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="statusPedidoVenda" name="statusPedVenda" caption="Status Pedido Venda" visible="true" foreignKey="sk_status_pedido_venda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tabelaPreco" name="tabelaPreco" caption="Tabela Preco" visible="true" foreignKey="sk_tab_preco" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tes" name="TES" caption="TES" visible="true" foreignKey="sk_tes" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tipoPedidoVenda" name="tipoPedidoVenda" caption="Tipo Pedido Venda" visible="true" foreignKey="sk_tipo_pedido_venda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="unidadeMedida" name="unidadeMedida" caption="Unidade Medida" visible="true" foreignKey="sk_um" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="Vendedor" visible="true" foreignKey="sk_vendedor" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="Gerente" visible="true" foreignKey="sk_gerente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="VendedorHist" caption="Representante (hist&#243;rico)" visible="true" foreignKey="sk_vendedor_hist" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="GerenteHist" caption="Gerente (hist&#243;rico)" visible="true" foreignKey="sk_gerente_hist" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoPadrao" name="grupoPadrao" visible="true" foreignKey="sk_grupo_padrao" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="infoPedido" caption="Informa&#231;&#245;es Detalhadas">
+      <Hierarchy name="Pedido" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="Pedido">
+        <Level name="numero" visible="true" column="numero_pedido" nameColumn="numero_pedido" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero Pedido">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Item" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="Item">
+        <Level name="numero" visible="true" column="item_pedido" nameColumn="item_pedido" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Item do Pedido">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="time" name="dataBase2" caption="Data Base" visible="true" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="time" name="dataEmissao2" caption="Data Emiss&#227;o" visible="true" foreignKey="sk_emissao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="enderecoMundi" name="EnderecoMundi" caption="Endere&#231;o" visible="true" foreignKey="sk_endereco" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="unidadepedido" column="quantidade" datatype="Integer" formatString="#,##0.00" aggregator="sum" caption="Quantidade" visible="true">
+    </Measure>
+    <Measure name="unitario" column="unitario" datatype="Numeric" formatString="R$ #,##0.00" aggregator="avg" caption="Valor Unit&#225;rio" visible="true">
+    </Measure>
+    <Measure name="comissao" column="vl_comissao" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor da Comiss&#227;o" visible="true">
+    </Measure>
+    <Measure name="totalpedido" column="vl_total" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Total Pedido" visible="true">
+    </Measure>
+    <Measure name="quantidadepedido" column="numero_pedido" datatype="Numeric" formatString="#,##0.00" aggregator="distinct-count" caption="Qtde. de Pedidos" visible="true">
+    </Measure>
+    <Measure name="unidadefaturado" column="qtd_faturado" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Qtde. Faturado" visible="true">
+    </Measure>
+    <Measure name="valorfaturado" column="valor_faturado" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor Faturado" visible="true">
+    </Measure>
+    <Measure name="volume" column="volume" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume (Kg)" visible="true">
+    </Measure>
+    <Measure name="volumefaturado" column="volume_faturado" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume (Kg) Faturado" visible="true">
+    </Measure>
+    <Measure name="volumecarteira" column="volume_carteira" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume (kg) Carteira" visible="true">
+    </Measure>
+    <Measure name="quantidadecarteira" column="quantidade_carteira" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Quantidade Carteira" visible="true">
+    </Measure>
+    <Measure name="totalcarteira" column="total_carteira" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Total Carteira" visible="true">
+    </Measure>
+    <CalculatedMember name="ticketmedio" formatString="R$ #,##0.00" caption="Ticket M&#233;dio" formula="[Measures].[totalpedido]/[Measures].[quantidadepedido]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percvalorfat" formatString="#,##0.00%" caption="% Faturamento Valor" formula="[Measures].[valorfaturado]/[Measures].[totalpedido]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percunidadefat" formatString="#,##0.00%" caption="% Faturamento Unidade" formula="[Measures].[unidadefaturado]/[Measures].[unidadepedido]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percvolumefat" formatString="#,##0.00%" caption="% Faturamento Volume" formula="[Measures].[volumefaturado]/[Measures].[volume]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="documentoSaida" caption="Documento de Sa&#237;da" visible="true" cache="false" enabled="true">
+    <Table name="documento_saida_colunar" schema="fato">
+    </Table>
+    <DimensionUsage source="dataBase" name="dataBase" caption="Data base" visible="false" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Periodo" name="dataEmissao" caption="Data Emiss&#227;o" visible="false" foreignKey="sk_emissao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Endereco" name="Endereco" caption="Endereco" visible="true" foreignKey="sk_endereco" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cliente" name="Cliente" visible="true" foreignKey="sk_cliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="condPagto" name="condPgto" caption="Condi&#231;&#227;o de Pagamento" visible="true" foreignKey="sk_cond_pagto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Empresa" name="Empresa" caption="Empresa" visible="true" foreignKey="sk_empresa" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoProduto" name="grupoProduto" caption="Linha Produto" visible="true" foreignKey="sk_grupo_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Moeda" name="Moeda" caption="Moeda" visible="true" foreignKey="sk_moeda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Produto" name="Produto" caption="Produto" visible="true" foreignKey="sk_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tabelaPreco" name="tabelaPreco" caption="Tabela Preco" visible="true" foreignKey="sk_tab_preco" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tes" name="TES" caption="TES" visible="true" foreignKey="sk_tes" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tipoNotaSaida" name="tipoNotaSaida" caption="Tipo Nota Saida" visible="true" foreignKey="sk_tipo_nota_saida" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="unidadeMedida" name="unidadeMedida" caption="Unidade Medida" visible="true" foreignKey="sk_um" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="Vendedor" visible="true" foreignKey="sk_vendedor" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="Gerente" visible="true" foreignKey="sk_gerente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="VendedorHist" caption="Representante (hist&#243;rico)" visible="true" foreignKey="sk_vendedor_hist" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="GerenteHist" caption="Gerente (hist&#243;rico)" visible="true" foreignKey="sk_gerente_hist" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoPadrao" name="grupoPadrao" visible="true" foreignKey="sk_grupo_padrao" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="InfoDocumento" caption="Informa&#231;&#245;es Detalhadas">
+      <Hierarchy name="Documento" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="Documento">
+        <Level name="numero" visible="true" column="num_nf" nameColumn="num_nf" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero NF">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Serie" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="S&#233;rie">
+        <Level name="numero" visible="true" column="num_serie" nameColumn="num_serie" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero S&#233;rie">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Item" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="Item Nota">
+        <Level name="numero" visible="true" column="item_nota" nameColumn="item_nota" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Item da Nota">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="time" name="dataBase2" caption="Data Base" visible="true" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="time" name="dataEmissao2" caption="Data Emiss&#227;o" visible="true" foreignKey="sk_emissao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="enderecoMundi" name="EnderecoMundi" caption="Endere&#231;o" visible="true" foreignKey="sk_endereco" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="unidadefaturado" column="quantidade" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Unidade Faturado" visible="true">
+    </Measure>
+    <Measure name="unitario" column="unitario" datatype="Numeric" formatString="R$ #,##0.00" aggregator="avg" caption="Valor Unit&#225;rio" visible="true">
+    </Measure>
+    <Measure name="valorfaturado" column="vl_total" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Total Faturado" visible="true">
+    </Measure>
+    <Measure name="ipi" column="ipi" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor IPI" visible="true">
+    </Measure>
+    <Measure name="icms_ret" column="icms_ret" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="ICMS Ret" visible="true">
+    </Measure>
+    <Measure name="comissao" column="comissao" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor Comiss&#227;o" visible="true">
+    </Measure>
+    <Measure name="custo" column="custo_item" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Custo do Item" visible="true">
+    </Measure>
+    <Measure name="icms" column="icms" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor ICMS" visible="true">
+    </Measure>
+    <Measure name="pis" column="pis" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor PIS" visible="true">
+    </Measure>
+    <Measure name="cofins" column="cofins" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor Cofins" visible="true">
+    </Measure>
+    <Measure name="quantidadenotas" column="num_nf" formatString="#,##0.00" aggregator="distinct-count" caption="Quantidade de Notas" visible="true">
+    </Measure>
+    <Measure name="volume" column="volume" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume (Kg)" visible="true">
+    </Measure>
+    <CalculatedMember name="margem" formatString="R$ #,##0.00" caption="Margem" formula="[Measures].[valorfaturado]-[Measures].[custo]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmargem" formatString="#,##0.00%" caption="% Margem" formula="([Measures].[valorfaturado]-[Measures].[custo])/[Measures].[valorfaturado]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="ticketmedio" formatString="R$ #,##0.00" caption="Ticket M&#233;dio" formula="[Measures].[valorfaturado]/[Measures].[quantidadenotas]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="metaVenda" caption="Meta de Vendas" visible="true" cache="false" enabled="true">
+    <Table name="meta_venda_colunar" schema="fato">
+    </Table>
+    <DimensionUsage source="Empresa" name="Empresa" caption="Empresa" visible="true" foreignKey="sk_empresa" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="Vendedor" caption="Vendedor" visible="true" foreignKey="sk_vendedor" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoProduto" name="grupoProduto" caption="Linha Produto" visible="true" foreignKey="sk_grupo_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="dataBase" name="dataBase" caption="Data Base" visible="false" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Moeda" name="Moeda" caption="Moeda" visible="true" foreignKey="sk_moeda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="Gerente" visible="true" foreignKey="sk_gerente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="time" name="dataBase2" caption="Data Base" visible="true" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="volumemeta" column="quantidade" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume Meta" visible="true">
+    </Measure>
+    <Measure name="valormeta" column="valor" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor Meta" visible="true">
+    </Measure>
+    <Measure name="comissaoPrevista" column="comissao" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="pedidoVendaagg" caption="Pedido de Venda" visible="false" cache="false" enabled="true">
+    <Table name="pedido_venda_agregada_colunar" schema="fato">
+    </Table>
+    <DimensionUsage source="dataBase" name="dataBase" caption="Data base" visible="false" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Periodo" name="dataEmissao" caption="Data Emiss&#227;o" visible="false" foreignKey="sk_emissao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Endereco" name="Endereco" caption="Endereco" visible="false" foreignKey="sk_endereco" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cliente" name="Cliente" visible="true" foreignKey="sk_cliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="condPagto" name="condPgto" caption="Condi&#231;&#227;o de Pagamento" visible="true" foreignKey="sk_cond_pagto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Empresa" name="Empresa" caption="Empresa" visible="true" foreignKey="sk_empresa" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoProduto" name="grupoProduto" caption="Linha Produto" visible="true" foreignKey="sk_grupo_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Moeda" name="Moeda" caption="Moeda" visible="true" foreignKey="sk_moeda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Produto" name="Produto" caption="Produto" visible="true" foreignKey="sk_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="statusPedidoVenda" name="statusPedVenda" caption="Status Pedido Venda" visible="true" foreignKey="sk_status_pedido_venda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tabelaPreco" name="tabelaPreco" caption="Tabela Preco" visible="true" foreignKey="sk_tab_preco" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tes" name="TES" caption="TES" visible="true" foreignKey="sk_tes" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tipoPedidoVenda" name="tipoPedidoVenda" caption="Tipo Pedido Venda" visible="true" foreignKey="sk_tipo_pedido_venda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="unidadeMedida" name="unidadeMedida" caption="Unidade Medida" visible="true" foreignKey="sk_um" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="Vendedor" visible="true" foreignKey="sk_vendedor" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="Gerente" visible="true" foreignKey="sk_gerente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="VendedorHist" caption="Representante (hist&#243;rico)" visible="true" foreignKey="sk_vendedor_hist" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="GerenteHist" caption="Gerente (hist&#243;rico)" visible="true" foreignKey="sk_gerente_hist" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoPadrao" name="grupoPadrao" visible="true" foreignKey="sk_grupo_padrao" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="infoPedido" caption="Informa&#231;&#245;es Detalhadas">
+      <Hierarchy name="Pedido" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="Pedido">
+        <Level name="numero" visible="true" column="numero_pedido" nameColumn="numero_pedido" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero Pedido">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Item" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="Item">
+        <Level name="numero" visible="true" column="item_pedido" nameColumn="item_pedido" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Item do Pedido">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="time" name="dataBase2" caption="Data Base" visible="true" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="time" name="dataEmissao2" caption="Data Emiss&#227;o" visible="true" foreignKey="sk_emissao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="enderecoMundi" name="EnderecoMundi" caption="Endere&#231;o" visible="true" foreignKey="sk_endereco" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="unidadepedido" column="quantidade" datatype="Integer" formatString="#,##0.00" aggregator="sum" caption="Quantidade" visible="true">
+    </Measure>
+    <Measure name="unitario" column="unitario" datatype="Numeric" formatString="R$ #,##0.00" aggregator="avg" caption="Valor Unit&#225;rio" visible="true">
+    </Measure>
+    <Measure name="comissao" column="vl_comissao" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor da Comiss&#227;o" visible="true">
+    </Measure>
+    <Measure name="totalpedido" column="vl_total" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Total Pedido" visible="true">
+    </Measure>
+    <Measure name="quantidadepedido" column="numero_pedido" datatype="Numeric" formatString="#,##0.00" aggregator="distinct-count" caption="Qtde. de Pedidos" visible="true">
+    </Measure>
+    <Measure name="unidadefaturado" column="qtd_faturado" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Qtde. Faturado" visible="true">
+    </Measure>
+    <Measure name="valorfaturado" column="valor_faturado" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor Faturado" visible="true">
+    </Measure>
+    <Measure name="volume" column="volume" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume (Kg)" visible="true">
+    </Measure>
+    <Measure name="volumefaturado" column="volume_faturado" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume (Kg) Faturado" visible="true">
+    </Measure>
+    <Measure name="volumecarteira" column="volume_carteira" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume (kg) Carteira" visible="true">
+    </Measure>
+    <Measure name="quantidadecarteira" column="quantidade_carteira" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Quantidade Carteira" visible="true">
+    </Measure>
+    <Measure name="totalcarteira" column="total_carteira" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Total Carteira" visible="true">
+    </Measure>
+    <CalculatedMember name="ticketmedio" formatString="R$ #,##0.00" caption="Ticket M&#233;dio" formula="[Measures].[totalpedido]/[Measures].[quantidadepedido]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percvalorfat" formatString="#,##0.00%" caption="% Faturamento Valor" formula="[Measures].[valorfaturado]/[Measures].[totalpedido]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percunidadefat" formatString="#,##0.00%" caption="% Faturamento Unidade" formula="[Measures].[unidadefaturado]/[Measures].[unidadepedido]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percvolumefat" formatString="#,##0.00%" caption="% Faturamento Volume" formula="[Measures].[volumefaturado]/[Measures].[volume]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="documentoSaidaagg" caption="Documento de Sa&#237;da" visible="false" cache="false" enabled="true">
+    <Table name="documento_saida_agregada_colunar" schema="fato">
+    </Table>
+    <DimensionUsage source="dataBase" name="dataBase" caption="Data base" visible="false" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Periodo" name="dataEmissao" caption="Data Emiss&#227;o" visible="false" foreignKey="sk_emissao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Endereco" name="Endereco" caption="Endereco" visible="true" foreignKey="sk_endereco" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cliente" name="Cliente" visible="true" foreignKey="sk_cliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="condPagto" name="condPgto" caption="Condi&#231;&#227;o de Pagamento" visible="true" foreignKey="sk_cond_pagto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Empresa" name="Empresa" caption="Empresa" visible="true" foreignKey="sk_empresa" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoProduto" name="grupoProduto" caption="Linha Produto" visible="true" foreignKey="sk_grupo_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Moeda" name="Moeda" caption="Moeda" visible="true" foreignKey="sk_moeda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Produto" name="Produto" caption="Produto" visible="true" foreignKey="sk_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tabelaPreco" name="tabelaPreco" caption="Tabela Preco" visible="true" foreignKey="sk_tab_preco" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tes" name="TES" caption="TES" visible="true" foreignKey="sk_tes" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="tipoNotaSaida" name="tipoNotaSaida" caption="Tipo Nota Saida" visible="true" foreignKey="sk_tipo_nota_saida" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="unidadeMedida" name="unidadeMedida" caption="Unidade Medida" visible="true" foreignKey="sk_um" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="Vendedor" visible="true" foreignKey="sk_vendedor" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="Gerente" visible="true" foreignKey="sk_gerente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="VendedorHist" caption="Representante (hist&#243;rico)" visible="true" foreignKey="sk_vendedor_hist" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="GerenteHist" caption="Gerente (hist&#243;rico)" visible="true" foreignKey="sk_gerente_hist" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoPadrao" name="grupoPadrao" visible="true" foreignKey="sk_grupo_padrao" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="InfoDocumento" caption="Informa&#231;&#245;es Detalhadas">
+      <Hierarchy name="Documento" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="Documento">
+        <Level name="numero" visible="true" column="num_nf" nameColumn="num_nf" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero NF">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Serie" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="S&#233;rie">
+        <Level name="numero" visible="true" column="num_serie" nameColumn="num_serie" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero S&#233;rie">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Item" visible="true" hasAll="true" allMemberName="todos" allMemberCaption="Todos" caption="Item Nota">
+        <Level name="numero" visible="true" column="item_nota" nameColumn="item_nota" type="String" internalType="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Item da Nota">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="time" name="dataBase2" caption="Data Base" visible="true" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="time" name="dataEmissao2" caption="Data Emiss&#227;o" visible="true" foreignKey="sk_emissao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="enderecoMundi" name="EnderecoMundi" caption="Endere&#231;o" visible="true" foreignKey="sk_endereco" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="unidadefaturado" column="quantidade" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Unidade Faturado" visible="true">
+    </Measure>
+    <Measure name="unitario" column="unitario" datatype="Numeric" formatString="R$ #,##0.00" aggregator="avg" caption="Valor Unit&#225;rio" visible="true">
+    </Measure>
+    <Measure name="valorfaturado" column="vl_total" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Total Faturado" visible="true">
+    </Measure>
+    <Measure name="ipi" column="ipi" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor IPI" visible="true">
+    </Measure>
+    <Measure name="icms_ret" column="icms_ret" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="ICMS Ret" visible="true">
+    </Measure>
+    <Measure name="comissao" column="comissao" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor Comiss&#227;o" visible="true">
+    </Measure>
+    <Measure name="custo" column="custo_item" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Custo do Item" visible="true">
+    </Measure>
+    <Measure name="icms" column="icms" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor ICMS" visible="true">
+    </Measure>
+    <Measure name="pis" column="pis" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor PIS" visible="true">
+    </Measure>
+    <Measure name="cofins" column="cofins" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor Cofins" visible="true">
+    </Measure>
+    <Measure name="quantidadenotas" column="num_nf" formatString="#,##0.00" aggregator="distinct-count" caption="Quantidade de Notas" visible="true">
+    </Measure>
+    <Measure name="volume" column="volume" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume (Kg)" visible="true">
+    </Measure>
+    <CalculatedMember name="margem" formatString="R$ #,##0.00" caption="Margem" formula="[Measures].[valorfaturado]-[Measures].[custo]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmargem" formatString="#,##0.00%" caption="% Margem" formula="([Measures].[valorfaturado]-[Measures].[custo])/[Measures].[valorfaturado]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="ticketmedio" formatString="R$ #,##0.00" caption="Ticket M&#233;dio" formula="[Measures].[valorfaturado]/[Measures].[quantidadenotas]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="metaVendaagg" caption="Meta de Vendas" visible="false" cache="false" enabled="true">
+    <Table name="meta_venda_agregada_colunar" schema="fato">
+    </Table>
+    <DimensionUsage source="Empresa" name="Empresa" caption="Empresa" visible="true" foreignKey="sk_empresa" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Vendedor" name="Vendedor" caption="Vendedor" visible="true" foreignKey="sk_vendedor" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="grupoProduto" name="grupoProduto" caption="Linha Produto" visible="true" foreignKey="sk_grupo_produto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="dataBase" name="dataBase" caption="Data Base" visible="false" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Moeda" name="Moeda" caption="Moeda" visible="true" foreignKey="sk_moeda" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Gerente" name="Gerente" visible="true" foreignKey="sk_gerente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="time" name="dataBase2" caption="Data Base" visible="true" foreignKey="sk_dtbase" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="volumemeta" column="quantidade" datatype="Numeric" formatString="#,##0.00" aggregator="sum" caption="Volume Meta" visible="true">
+    </Measure>
+    <Measure name="valormeta" column="valor" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Valor Meta" visible="true">
+    </Measure>
+    <Measure name="comissaoPrevista" column="comissao" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <VirtualCube enabled="true" name="faturadometa" caption="Faturado vs Meta vs Carteira" visible="true">
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Moeda">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="grupoProduto">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Vendedor">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Empresa">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="documentoSaida" visible="true" highCardinality="false" name="tipoNotaSaida">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="documentoSaida" visible="true" highCardinality="false" name="Produto">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="documentoSaida" visible="true" highCardinality="false" name="Cliente">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Gerente">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Endereco">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="pedidoVenda" visible="true" highCardinality="false" name="TES">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="false" highCardinality="false" name="dataBase">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="documentoSaida" caption="Data Base" visible="true" highCardinality="false" name="dataBase2">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="enderecoMundi">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="documentoSaida" name="[Measures].[unidadefaturado]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="documentoSaida" name="[Measures].[valorfaturado]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="metaVenda" name="[Measures].[volumemeta]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="metaVenda" name="[Measures].[valormeta]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="documentoSaida" name="[Measures].[ticketmedio]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="documentoSaida" name="[Measures].[volume]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="documentoSaida" name="[Measures].[comissao]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="metaVenda" name="[Measures].[comissaoPrevista]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="pedidoVenda" name="[Measures].[totalcarteira]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="pedidoVenda" name="[Measures].[quantidadecarteira]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="pedidoVenda" name="[Measures].[volumecarteira]" visible="true">
+    </VirtualCubeMeasure>
+    <CalculatedMember name="unidadefaturadovalid" formatString="#,##0.00" caption="Unidade Faturado" formula="ValidMeasure([Measures].[unidadefaturado])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="valorfaturadovalid" formatString="R$ #,##0.00" caption="Valor Faturado" formula="ValidMeasure([Measures].[valorfaturado])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="volumemetavalid" formatString="#,##0.00" caption="Volume Meta" formula="ValidMeasure([Measures].[volumemeta])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="valormetavalid" formatString="R$ #,##0.00" caption="Valor Meta" formula="ValidMeasure([Measures].[valormeta])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="deltametavolume" formatString="#,##0.00" caption="Delta Meta Volume" formula="[Measures].[unidadefaturadovalid]-[Measures].[volumemetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="deltametavalor" formatString="R$ #,##0.00" caption="Delta Meta Valor" formula="[Measures].[valorfaturadovalid]-[Measures].[valormetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmetavolume" formatString="#,##0.00%" caption="% Ating Meta Volume" formula="[Measures].[unidadefaturadovalid]/[Measures].[volumemetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmetavalor" formatString="#,##0.00%" caption="% Ating Meta Valor" formula="[Measures].[valorfaturadovalid]/[Measures].[valormetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+	  <CalculatedMember name="deltametavolumecarteira" formatString="#,##0.00" caption="Delta Meta Volume(+ Carteira)" formula="([Measures].[unidadefaturadovalid]+[Measures].[volumecarteiravalid])-[Measures].[volumemetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="deltametavalorcarteira" formatString="R$ #,##0.00" caption="Delta Meta Valor(+ Carteira)" formula="([Measures].[valorfaturadovalid]+[Measures].[totalcarteiravalid])-[Measures].[valormetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmetavolumecarteira" formatString="#,##0.00%" caption="% Ating Meta Volume(+ Carteira)" formula="([Measures].[unidadefaturadovalid]+[Measures].[volumecarteiravalid])/[Measures].[volumemetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmetavalorcarteira" formatString="#,##0.00%" caption="% Ating Meta Valor(+ Carteira)" formula="([Measures].[valorfaturadovalid]+[Measures].[totalcarteiravalid])/[Measures].[valormetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="volumepedidovalid" formatString="#,##0.00" caption="Volume Pedido" formula="ValidMeasure([Measures].[volume])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="valorcomissaoprevistovalid" formatString="R$ #,##0.00" caption="Valor Comissao Prevista" formula="ValidMeasure([Measures].[comissaoPrevista])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="valorcomissaovalid" formatString="R$ #,##0.00" caption="Valor Comissao" formula="ValidMeasure([Measures].[comissao])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="totalcarteiravalid" formatString="R$ #,##0.00" caption="Total Carteira" formula="ValidMeasure([Measures].[totalcarteira])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="quantidadecarteiravalid" formatString="#,##0.00" caption="Unidade Carteira" formula="ValidMeasure([Measures].[quantidadecarteira])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="volumecarteiravalid" formatString="#,##0.00" caption="Volume (kg) Carteira" formula="ValidMeasure([Measures].[volumecarteira])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </VirtualCube>
+  <VirtualCube enabled="true" name="faturadometaagg" caption="Faturado vs Meta Vs Carteira Agregada" visible="true">
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Moeda">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="grupoProduto">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Vendedor">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Empresa">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="documentoSaidaagg" visible="true" highCardinality="false" name="tipoNotaSaida">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="documentoSaidaagg" visible="true" highCardinality="false" name="Produto">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="documentoSaidaagg" visible="true" highCardinality="false" name="Cliente">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Gerente">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="Endereco">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="pedidoVendaagg" visible="true" highCardinality="false" name="TES">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="false" highCardinality="false" name="dataBase">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="documentoSaidaagg" caption="Data Base" visible="true" highCardinality="false" name="dataBase2">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" highCardinality="false" name="enderecoMundi">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="documentoSaidaagg" name="[Measures].[unidadefaturado]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="documentoSaidaagg" name="[Measures].[valorfaturado]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="metaVendaagg" name="[Measures].[volumemeta]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="metaVendaagg" name="[Measures].[valormeta]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="documentoSaidaagg" name="[Measures].[ticketmedio]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="documentoSaidaagg" name="[Measures].[volume]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="documentoSaidaagg" name="[Measures].[comissao]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="metaVendaagg" name="[Measures].[comissaoPrevista]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="pedidoVendaagg" name="[Measures].[totalcarteira]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="pedidoVendaagg" name="[Measures].[quantidadecarteira]" visible="false">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="pedidoVendaagg" name="[Measures].[volumecarteira]" visible="false">
+    </VirtualCubeMeasure>
+    <CalculatedMember name="unidadefaturadovalid" formatString="#,##0.00" caption="Unidade Faturado" formula="ValidMeasure([Measures].[unidadefaturado])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="valorfaturadovalid" formatString="R$ #,##0.00" caption="Valor Faturado" formula="ValidMeasure([Measures].[valorfaturado])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="volumemetavalid" formatString="#,##0.00" caption="Volume Meta" formula="ValidMeasure([Measures].[volumemeta])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="valormetavalid" formatString="R$ #,##0.00" caption="Valor Meta" formula="ValidMeasure([Measures].[valormeta])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="deltametavolume" formatString="#,##0.00" caption="Delta Meta Volume" formula="[Measures].[unidadefaturadovalid]-[Measures].[volumemetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="deltametavalor" formatString="R$ #,##0.00" caption="Delta Meta Valor" formula="[Measures].[valorfaturadovalid]-[Measures].[valormetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmetavolume" formatString="#,##0.00%" caption="% Ating Meta Volume" formula="[Measures].[unidadefaturadovalid]/[Measures].[volumemetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmetavalor" formatString="#,##0.00%" caption="% Ating Meta Valor" formula="[Measures].[valorfaturadovalid]/[Measures].[valormetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+	  <CalculatedMember name="deltametavolumecarteira" formatString="#,##0.00" caption="Delta Meta Volume(+ Carteira)" formula="([Measures].[unidadefaturadovalid]+[Measures].[volumecarteiravalid])-[Measures].[volumemetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="deltametavalorcarteira" formatString="R$ #,##0.00" caption="Delta Meta Valor(+ Carteira)" formula="([Measures].[valorfaturadovalid]+[Measures].[totalcarteiravalid])-[Measures].[valormetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmetavolumecarteira" formatString="#,##0.00%" caption="% Ating Meta Volume(+ Carteira)" formula="([Measures].[unidadefaturadovalid]+[Measures].[volumecarteiravalid])/[Measures].[volumemetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="percmetavalorcarteira" formatString="#,##0.00%" caption="% Ating Meta Valor(+ Carteira)" formula="([Measures].[valorfaturadovalid]+[Measures].[totalcarteiravalid])/[Measures].[valormetavalid]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="volumepedidovalid" formatString="#,##0.00" caption="Volume Pedido" formula="ValidMeasure([Measures].[volume])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="valorcomissaoprevistovalid" formatString="R$ #,##0.00" caption="Valor Comissao Prevista" formula="ValidMeasure([Measures].[comissaoPrevista])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="valorcomissaovalid" formatString="R$ #,##0.00" caption="Valor Comissao" formula="ValidMeasure([Measures].[comissao])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="totalcarteiravalid" formatString="R$ #,##0.00" caption="Total Carteira" formula="ValidMeasure([Measures].[totalcarteira])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="quantidadecarteiravalid" formatString="#,##0.00" caption="Unidade Carteira" formula="ValidMeasure([Measures].[quantidadecarteira])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="volumecarteiravalid" formatString="#,##0.00" caption="Volume (kg) Carteira" formula="ValidMeasure([Measures].[volumecarteira])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </VirtualCube>
+  <Role name="Administrator">
+    <SchemaGrant access="all">
+      <CubeGrant cube="documentoSaida" access="all">
+      </CubeGrant>
+      <CubeGrant cube="metaVenda" access="all">
+      </CubeGrant>
+      <CubeGrant cube="pedidoVenda" access="all">
+      </CubeGrant>
+      <CubeGrant cube="faturadometa" access="all">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="Dashboard Comercial">
+    <SchemaGrant access="all">
+      <CubeGrant cube="documentoSaida" access="all">
+      </CubeGrant>
+      <CubeGrant cube="metaVenda" access="all">
+      </CubeGrant>
+      <CubeGrant cube="pedidoVenda" access="all">
+      </CubeGrant>
+      <CubeGrant cube="faturadometa" access="all">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="Dashboard Vendedores">
+    <SchemaGrant access="all">
+      <CubeGrant cube="documentoSaida" access="all">
+      </CubeGrant>
+      <CubeGrant cube="metaVenda" access="all">
+      </CubeGrant>
+      <CubeGrant cube="pedidoVenda" access="all">
+      </CubeGrant>
+      <CubeGrant cube="faturadometa" access="all">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="GERENTEEDUARDO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="faturadometa" access="all">
+        <DimensionGrant dimension="Measures" access="all">
+        </DimensionGrant>
+        <HierarchyGrant hierarchy="[Gerente]" topLevel="[Gerente].[nome]" bottomLevel="[Gerente].[nome]" rollupPolicy="partial" access="custom">
+          <MemberGrant member="[Gerente].[EDUARDO BARBOSA CABREIRA]" access="all">
+          </MemberGrant>
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="faturadometaagg" access="all">
+        <DimensionGrant dimension="Measures" access="all">
+        </DimensionGrant>
+        <HierarchyGrant hierarchy="[Gerente]" topLevel="[Gerente].[nome]" bottomLevel="[Gerente].[nome]" rollupPolicy="partial" access="custom">
+          <MemberGrant member="[Gerente].[EDUARDO BARBOSA CABREIRA]" access="all">
+          </MemberGrant>
+        </HierarchyGrant>
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="GERENTECASSIO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="faturadometa" access="all">
+        <DimensionGrant dimension="Measures" access="all">
+        </DimensionGrant>
+        <HierarchyGrant hierarchy="[Gerente]" topLevel="[Gerente].[nome]" bottomLevel="[Gerente].[nome]" rollupPolicy="partial" access="custom">
+          <MemberGrant member="[Gerente].[CASSIO SILVIO OLIVEIRA]" access="all">
+          </MemberGrant>
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="faturadometaagg" access="all">
+        <DimensionGrant dimension="Measures" access="all">
+        </DimensionGrant>
+        <HierarchyGrant hierarchy="[Gerente]" topLevel="[Gerente].[nome]" bottomLevel="[Gerente].[nome]" rollupPolicy="partial" access="custom">
+          <MemberGrant member="[Gerente].[CASSIO SILVIO OLIVEIRA]" access="all">
+          </MemberGrant>
+        </HierarchyGrant>
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+</Schema>
